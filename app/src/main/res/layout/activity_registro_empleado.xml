@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroEmpleadoActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Introduce tus datos para el registro"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/txt_nombre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/txt_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre(s)"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.288"
+            tools:layout_editor_absoluteX="0dp"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText
+            android:id="@+id/txt_apellidoPaterno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="Apellido Paterno"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nombre"
+            tools:layout_editor_absoluteX="0dp"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText
+            android:id="@+id/txt_apellidoMaterno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apellido Materno"
+            app:layout_constraintTop_toBottomOf="@+id/txt_apellidoPaterno"
+            tools:layout_editor_absoluteX="-16dp"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText
+            android:id="@+id/txt_fechaNac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Fecha de nacimiento"
+            android:inputType="date"
+            app:layout_constraintTop_toBottomOf="@+id/txt_apellidoMaterno"
+            tools:layout_editor_absoluteX="28dp" />
+
+        <EditText
+            android:id="@+id/txt_numeroTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número de telefono"
+            android:inputType="phone"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+            tools:layout_editor_absoluteX="16dp"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText
+            android:id="@+id/txt_direccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dirrección de domicilio"
+            app:layout_constraintTop_toBottomOf="@+id/txt_numeroTelefono"
+            tools:layout_editor_absoluteX="16dp"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText
+            android:id="@+id/txt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress"
+            app:layout_constraintTop_toBottomOf="@+id/txt_direccion"
+            tools:layout_editor_absoluteX="-58dp"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText
+            android:id="@+id/txt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña de acceso a la app"
+            app:layout_constraintTop_toBottomOf="@+id/txt_email"
+            tools:layout_editor_absoluteX="0dp"
+            android:layout_marginBottom="5dp"/>
+
+            <Button
+                android:id="@+id/btn_generarQR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Generar QR"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_password"
+                android:layout_marginBottom="15dp"/>
+
+            <ImageView
+            android:id="@+id/QR_generado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

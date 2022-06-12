@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroPatronActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Introduce tus datos para el registro"
+        android:textSize="25sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/txt_propietarioEmp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_nombre_empresa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la empresa"
+        app:layout_constraintTop_toBottomOf="@+id/txt_propietarioEmp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/txt_propietarioEmp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Propietario de la empresa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-16dp" />
+
+    <EditText
+        android:id="@+id/txt_direccionEmpresa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Direccion de la empresa"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombre_empresa"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/correo_empresa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="268dp"
+        android:hint="Correo electrónico"
+        app:layout_constraintTop_toBottomOf="@+id/txt_direccionEmpresa"
+        tools:layout_editor_absoluteX="42dp" />
+
+    <Button
+        android:id="@+id/btn_escanearQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escanear QR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_direccionEmpresa" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

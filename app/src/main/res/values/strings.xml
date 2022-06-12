@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Clock Check</string>
+    <string name="app_title">Clock Check</string>
+    <string name="wey_contexto">Contexto</string>
+    <string name="button_siguiente">Siguiente</string>
+
+    <string name="selection_title_text">Selecciona una de las dos opciones:</string>
+    <string name="patron_text">Soy un patron y quiero registrar a mis empleados</string>
+    <string name="empleado_text">Soy un empleado y quiero registrarme en una empresa</string>
+    <string name="button_patron">Registrar</string>
+    <string name="button_empleado">Registrarme</string>
+    <string name="title_activity_registrarme_clock">RegistrarmeClockActivity</string>
+</resources>
