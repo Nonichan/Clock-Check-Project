@@ -2,12 +2,15 @@ package com.example.clockcheck;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
@@ -39,8 +42,14 @@ public class RegistroEmpleadoActivity extends AppCompatActivity {
         btn_Genera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SharedPreferences preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
+                SharedPreferences.Editor obj_editor = preferencias.edit();
+
+
                 try {
-                    String textoQR = txtnombre.getText().toString().trim()+"/"+
+
+
+                    String textoQR = txtnombre.getText().toString()+"/"+
                             txtapellidoP.getText().toString().trim()+"/"+
                             txtapellidoM.getText().toString().trim()+"/"+
                             fechaNacimiento.getText().toString().trim()+"/"+
@@ -52,9 +61,16 @@ public class RegistroEmpleadoActivity extends AppCompatActivity {
                     Bitmap bitmap = barcodeEncoder.encodeBitmap(textoQR,
                             BarcodeFormat.QR_CODE, 750, 750);
                     imgQr.setImageBitmap(bitmap);
+
+                    obj_editor.putString("nombre", txtnombre.getText().toString());
+                    obj_editor.putString("email" , correo.getText().toString());
+                    obj_editor.commit();
+                    Toast.makeText(getApplicationContext(), "Se guardo: "+correo.getText().toString(), Toast.LENGTH_LONG ).show();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+
+
             }
         });
 
