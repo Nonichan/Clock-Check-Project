@@ -95,14 +95,7 @@
             tools:layout_editor_absoluteX="-58dp"
             android:layout_marginBottom="5dp"/>
 
-        <EditText
-            android:id="@+id/txt_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Contraseña de acceso a la app"
-            app:layout_constraintTop_toBottomOf="@+id/txt_email"
-            tools:layout_editor_absoluteX="0dp"
-            android:layout_marginBottom="5dp"/>
+
 
             <Button
                 android:id="@+id/btn_generarQR"

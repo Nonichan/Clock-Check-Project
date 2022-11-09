@@ -30,13 +30,9 @@ public class RegistroEmpleadoActivity extends AppCompatActivity {
         EditText numeroTelefono = findViewById(R.id.txt_numeroTelefono);
         EditText direccion = findViewById(R.id.txt_direccion);
         EditText correo = findViewById(R.id.txt_email);
-        EditText contrasena = findViewById(R.id.txt_password);
+
         Button btn_Genera = findViewById(R.id.btn_generarQR);
         ImageView imgQr = findViewById(R.id.QR_generado);
-
-
-
-
 
 
         btn_Genera.setOnClickListener(new View.OnClickListener() {
@@ -44,7 +40,6 @@ public class RegistroEmpleadoActivity extends AppCompatActivity {
             public void onClick(View view) {
                 SharedPreferences preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
                 SharedPreferences.Editor obj_editor = preferencias.edit();
-
 
                 try {
 

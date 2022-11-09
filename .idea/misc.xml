@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_menu_principal_patron.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_qr_registra_asistencia.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_registro_empleado.xml" value="0.264" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_registro_empleado.xml" value="0.1" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_registro_patron.xml" value="0.264" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_seleccion.xml" value="0.25416666666666665" />
       </map>

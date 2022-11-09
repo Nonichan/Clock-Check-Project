@@ -5,9 +5,9 @@
     <string name="button_siguiente">Siguiente</string>
 
     <string name="selection_title_text">Selecciona una de las dos opciones:</string>
-    <string name="patron_text">Soy un patron y quiero registrar a mis empleados</string>
-    <string name="empleado_text">Soy un empleado y quiero registrarme en una empresa</string>
-    <string name="button_patron">Registrar</string>
-    <string name="button_empleado">Registrarme</string>
+    <string name="patron_text">Crear una nueva Base de Datos</string>
+    <string name="empleado_text">Unirse a una Base de Datos ya existente</string>
+    <string name="button_patron">Crear</string>
+    <string name="button_empleado">Unirse</string>
     <string name="title_activity_registrarme_clock">RegistrarmeClockActivity</string>
 </resources>
