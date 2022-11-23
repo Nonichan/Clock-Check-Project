@@ -13,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
-import com.google.zxing.WriterException;
 import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 public class RegistroEmpleadoActivity extends AppCompatActivity {
@@ -57,6 +56,8 @@ public class RegistroEmpleadoActivity extends AppCompatActivity {
                             BarcodeFormat.QR_CODE, 750, 750);
                     imgQr.setImageBitmap(bitmap);
 
+
+                    //Se guarda el nombre y el correo electronico en una variable para bloquear la aplicación despues
                     obj_editor.putString("nombre", txtnombre.getText().toString());
                     obj_editor.putString("email" , correo.getText().toString());
                     obj_editor.commit();

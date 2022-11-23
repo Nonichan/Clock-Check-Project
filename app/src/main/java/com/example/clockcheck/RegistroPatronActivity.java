@@ -1,3 +1,4 @@
+//Esta clase sera descontinuada pronto de la aplicacion pero la seguire usando para referencias
 package com.example.clockcheck;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,11 +11,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.clockcheck.db.DbHelper;
-import com.example.clockcheck.db.DbUsuario;
+import com.example.clockcheck.db.DbUsuarios;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -30,9 +30,7 @@ public class RegistroPatronActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registro_patron);
         Button btnScan = findViewById(R.id.btn_escanearQR);
 
-
-
-
+        //Este boton sirve para abrir el escaner de codigos QR
 
         btnScan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,15 +73,16 @@ public class RegistroPatronActivity extends AppCompatActivity {
                     //System.out.println(subcadena);
                 }
             }
-            DbUsuario dbUsuario = new DbUsuario(RegistroPatronActivity.this);
-            long id = dbUsuario.insertarContacto(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6]);
+            DbUsuarios dbUsuarios = new DbUsuarios(RegistroPatronActivity.this);
+            long id = dbUsuarios.insertarUsuarios(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6]);
 
+            //si registraba abria una clase que ya fue eliminada
             if(id>0){
                 Toast.makeText(RegistroPatronActivity.this, "REGISTRO EXITOSO", Toast.LENGTH_LONG).show();
                 obj_editor.putString("tipoUsuario", "patron");
                 Intent intent = new Intent(     //con esta clase nos movemos a otro activity
-                        RegistroPatronActivity.this,
-                        MenuPrincipalPatronActivity.class
+                        //RegistroPatronActivity.this,
+                        //MenuPrincipalPatronActivity.class
                 );
             }else{
                 Toast.makeText(RegistroPatronActivity.this, "REGISTRO FALLIDO", Toast.LENGTH_LONG).show();
@@ -93,9 +92,10 @@ public class RegistroPatronActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
+    // En esta parte se crea la base de datos he ahi la razon del condicional if db != null
     private void RegistrarUsuarios(){
         DbHelper dbHelper = new DbHelper(getApplicationContext());
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        SQLiteDatabase db = dbHelper.getWritableDatabase();        //Con esto indicamos que vamos a escribir en la base de datos
         ContentValues values = new ContentValues();
 
         if(db != null) {

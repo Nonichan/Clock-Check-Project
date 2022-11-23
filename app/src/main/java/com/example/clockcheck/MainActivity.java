@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
                 if (guardado == null) {
                     Intent intent = new Intent(     //con esta clase nos movemos a otro activity
                             MainActivity.this,

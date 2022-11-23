@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.clockcheck">
+    package="com.example.clockcheck" >
 
     <uses-sdk tools:overrideLibrary=".com.google.zxing.client.android" />
 
@@ -12,9 +12,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_sand_clock_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ClockCheck">
+        android:theme="@style/Theme.ClockCheck" >
         <activity
-            android:name=".MenuPrincipalPatronActivity"
+            android:name=".ActivityAdministrador"
+            android:exported="true"
+            android:label="@string/title_activity_administrador" />
+        <activity
+            android:name=".RegistroNuevoUsuarioActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RegistroNuevoAdministradorActivity"
             android:exported="true" />
         <activity
             android:name=".QR_Registra_Asistencia_Activity"
@@ -30,7 +37,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
