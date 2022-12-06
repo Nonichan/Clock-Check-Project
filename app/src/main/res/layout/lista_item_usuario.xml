@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/usuario_64px"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="6dp">
+
+        <TextView
+            android:id="@+id/viewNombres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombres"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/viewApellidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apellidos"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/viewNumTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="NumeroTelefono"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/viewCorreoElectronico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="CorreoElectronico"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,3 +1,4 @@
+//clase que dejo de usarse
 package com.example.clockcheck;
 
 import androidx.appcompat.app.AppCompatActivity;

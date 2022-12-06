@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistroNuevoAdministradorActivity">
+    tools:context=".RegistroNuevoAdministradorActivity"
+    android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/txt_apellidos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Apellidos"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_nombres" />
+
 
     <TextView
         android:id="@+id/textView5"
@@ -44,12 +34,25 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
+        android:id="@+id/txt_apellidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Apellidos"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombres" />
+
+    <EditText
         android:id="@+id/txt_fechanacimiento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Fecha de nacimiento (YYYY-MM-DD)"
+        android:hint="Fecha de nacimiento (Año-Mes-Dia)"
         android:inputType="date"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,11 +100,12 @@
 
     <Button
         android:id="@+id/btn_crearBD"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Crear nueva Base de Datos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_contraseña" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/txt_contraseña"
+        android:gravity="center"/>
+</LinearLayout>

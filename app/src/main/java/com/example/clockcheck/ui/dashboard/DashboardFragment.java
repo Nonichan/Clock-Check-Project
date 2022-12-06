@@ -14,28 +14,31 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.clockcheck.R;
 import com.example.clockcheck.databinding.FragmentDashboardBinding;
+import com.example.clockcheck.db.DbUsuarios;
+import com.example.clockcheck.entidades.Usuario;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
     private FragmentDashboardBinding binding;
+    List<Usuario> elements;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
+        View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        init();
+        return view;
+    }
 
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+    public void init(){
+        ArrayList<Usuario> usuarios = new ArrayList<>();
+        DbUsuarios db = new DbUsuarios(getContext());
 
-        final TextView textView = binding.textDashboard;
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-        return root;
+        usuarios = db.mostrarUsuarios();
+        //elements =
     }
 
     @Override

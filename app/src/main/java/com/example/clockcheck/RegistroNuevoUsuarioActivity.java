@@ -10,11 +10,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
 import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 public class RegistroNuevoUsuarioActivity extends AppCompatActivity {
+
+    SharedPreferences preferencias;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +38,7 @@ public class RegistroNuevoUsuarioActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                SharedPreferences preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
+                preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
                 SharedPreferences.Editor obj_editor = preferencias.edit();
 
                 try {
@@ -51,6 +54,12 @@ public class RegistroNuevoUsuarioActivity extends AppCompatActivity {
                     //Generamos el codigo QR con la cadena creada
                     BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
                     Bitmap bitmap = barcodeEncoder.encodeBitmap(textoQR, BarcodeFormat.QR_CODE, 750,750);
+
+                    //objeto del shared preferences para guardar un texto en memoria
+                    obj_editor.putString("nombre", txtnombre.getText().toString().trim());
+                    obj_editor.putString("tipoUsuario", "usuario");
+                    obj_editor.commit();
+                    Toast.makeText(RegistroNuevoUsuarioActivity.this, "MODO USUARIO ACTIVADO", Toast.LENGTH_SHORT).show();
 
                     //Se usa el contenedor ImageView para visualizar el codigo generado
                     iv_QRgenerar.setImageBitmap(bitmap);

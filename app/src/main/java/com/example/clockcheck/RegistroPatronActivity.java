@@ -51,11 +51,13 @@ public class RegistroPatronActivity extends AppCompatActivity {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         SharedPreferences preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
         SharedPreferences.Editor obj_editor = preferencias.edit();
+
         if(result.getContents() == null){
             Toast.makeText(this, "Lectura cancelada", Toast.LENGTH_LONG).show();
         }else{
             Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
 
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             String cadena = result.getContents();
             String subcadena = "";
             int dato = 0, inicioCad = 0;
@@ -73,6 +75,7 @@ public class RegistroPatronActivity extends AppCompatActivity {
                     //System.out.println(subcadena);
                 }
             }
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             DbUsuarios dbUsuarios = new DbUsuarios(RegistroPatronActivity.this);
             long id = dbUsuarios.insertarUsuarios(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6]);
 

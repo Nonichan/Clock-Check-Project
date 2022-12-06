@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-import com.example.clockcheck.utilidades.Utilidades;
+
 
 public class DbHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;

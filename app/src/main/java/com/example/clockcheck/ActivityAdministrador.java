@@ -1,8 +1,9 @@
 package com.example.clockcheck;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -11,10 +12,18 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.clockcheck.databinding.ActivityAdministradorBinding;
+import com.example.clockcheck.db.DbUsuarios;
+import com.example.clockcheck.ui.home.UsuariosFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 public class ActivityAdministrador extends AppCompatActivity {
 
     private ActivityAdministradorBinding binding;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +41,9 @@ public class ActivityAdministrador extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_administrador);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+
     }
+
 
 }
