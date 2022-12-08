@@ -21,4 +21,26 @@ public class Utilidades {
             "correoElectronico TEXT, " +
             "fechaRegistro TEXT, " +
             "contraseña TEXT)";
+
+    public static final String TABLA_ASISTENCIAS = "asistencias";
+    public static final String CAMPO_FOLIO = "folio";
+    public static final String CAMPO_ID_fk = "id";
+    public static final String CAMPO_HORALLEGADA = "horaLlegada";
+    public static final String CAMPO_HORASALIDA = "horaSalida";
+    public static final String CAMPO_ASISTENCIA = "asistencia";
+    public static final String CAMPO_CALIDADASISTENCIA = "calidadAsistencia";
+
+
+    public static final String CREAR_TABLA_ASISTENCIAS = "CREATE TABLE "+TABLA_ASISTENCIAS+" (folio INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            "id INTEGER, " +
+            "horaLlegada TEXT, "+
+            "horaSalida TEXT, " +
+            "asistencia INTEGER, " +
+            "calidadAsistencia TEXT, " +
+            "CONSTRAINT FK_usuarios FOREIGN KEY (id) REFERENCES Usuarios(id))";
+
+
+
+    public static final String SELECT_USUARIOS_ASISTENCIAS =
+            "SELECT usuarios.nombres, usuarios.apellidos, asistencias.horaLlegada, asistencias.horaSalida FROM usuarios INNER JOIN asistencias ON usuarios.id = asistencias.id";
 }

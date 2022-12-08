@@ -3,20 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_administrador.xml" value="0.1" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_administrador.xml" value="0.264" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_menu_principal_patron.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_qr_registra_asistencia.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_registro_empleado.xml" value="0.264" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_registro_nuevo_administrador.xml" value="0.264" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_registro_nuevo_empleado.xml" value="0.264" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_registro_nuevo_usuario.xml" value="0.264" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_registro_nuevo_usuario.xml" value="0.25" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_registro_patron.xml" value="0.264" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/activity_seleccion.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/fragment_dashboard.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/fragment_home.xml" value="0.176" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/lista_item_asistencia.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/lista_item_cardview.xml" value="0.264" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/lista_item_usuario.xml" value="0.536" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/layout/lista_item_usuario.xml" value="0.4" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/ClockCheck/app/src/main/res/menu/bottom_nav_menu.xml" value="0.27447916666666666" />
       </map>
     </option>

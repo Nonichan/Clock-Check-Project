@@ -74,4 +74,6 @@ public class ListaUsuariosAdapter extends RecyclerView.Adapter<ListaUsuariosAdap
             viewCorreoElectronico = itemView.findViewById(R.id.viewCorreoElectronico);
         }
     }
+
+
 }

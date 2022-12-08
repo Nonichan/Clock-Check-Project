@@ -1,4 +1,4 @@
-//Esta clase sera descontinuada pronto de la aplicacion pero la seguire usando para referencias
+//todo Esta clase sera descontinuada pronto de la aplicacion pero la seguire usando para referencias
 package com.example.clockcheck;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,8 +22,6 @@ public class RegistroPatronActivity extends AppCompatActivity {
 
     String datos[] = new String[7];
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +42,6 @@ public class RegistroPatronActivity extends AppCompatActivity {
                 integrator.initiateScan();
             }
         });
-
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
